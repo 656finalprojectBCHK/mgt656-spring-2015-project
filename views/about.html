@@ -1,6 +1,7 @@
  {% extends "layout.html" %}
  
  <header>
+{% block style %}
     <style>
     h1 {
       text-align: center;
@@ -43,9 +44,12 @@
       background-color: white;
     }
     </style>
+{% endblock %}
+{% block header %}
     <h1>ABOUT US</h1>
-    <h2>MEET TEAM YOUNG FROST</h2>
+    <h2>Meet YOUNG FROST byte</h2>
   </header>
+{% endblock %}
 {% block mainContent %}
 <body>
   <img id="outstanding-lark-headshot" src="http://portal.som.yale.edu/sites/default/files/styles/yale_portal_profile_image/public/profile_pictures/bbb24.jpg?itok=nscTr1jw">

@@ -2,17 +2,17 @@
 
 {% block header %}
   <header>
-    <h1>{{event.title}}</h1>
-    <h2>{{event.date}}</h2>
+    <h1 id='title'>{{event.title}}</h1>
+    <span id='date'>{{event.date}}</span>
   </header>
 {% endblock %}
 
 {% block mainContent %}
   <p>
-   <img id="event_image" src="{{event.image}}">
- 
-   <p> <strong> Where the party at? </strong>   {{event.location}} </p>
-   <p> <strong> Will your crew be there? Look who's coming: </strong> {{event.attending}} </p>
+   <img id="image" src="{{event.image}}"></img>
+ <p></p>
+   <span id='location'> <strong> Where the party at? </strong> {{event.location}} </span>
+   <ul id='attendees'> <strong> Will your crew be there? Look who's coming: </strong> {{event.attending}} </ul>
   </p>
   
  

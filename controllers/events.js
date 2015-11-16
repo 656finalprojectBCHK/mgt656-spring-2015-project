@@ -131,9 +131,9 @@ if (hour > 23 || hour < 0) {
 }
 
 function eventDetail (request, response) {
-  var ev = events.getById(parseInt(request.params.id));
+  var ev = events.getById(parseInt(request.params.id,10));
   if (ev === null) {
-    response.status(404).send('No such event');
+    response.status(404).send('Womp womppppp. Sorry, no event here!');
   }
   response.render('event-detail.html', {event: ev});
 }

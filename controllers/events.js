@@ -116,6 +116,7 @@ if (hour > 23 || hour < 0) {
 
   if (contextData.errors.length === 0) {
     var newEvent = {
+      id: events.getMaxId() + 1,
       title: request.body.title,
       location: request.body.location,
       image: request.body.image,
@@ -123,16 +124,16 @@ if (hour > 23 || hour < 0) {
       attending: []
     };
     events.all.push(newEvent);
-    response.redirect('/events');
+    response.redirect(302,'/events/' + newEvent.id);
   }else{
     response.render('create-event.html', contextData);
   }
 }
 
 function eventDetail (request, response) {
-  var ev = events.getById(parseInt(request.params.id));
+  var ev = events.getById(parseInt(request.params.id,10));
   if (ev === null) {
-    response.status(404).send('No such event');
+    response.status(404).send('Womp womppppp. Sorry, no event here!');
   }
   response.render('event-detail.html', {event: ev});
 }

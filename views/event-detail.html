@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  <header>
+    <h1 id='title'>{{event.title}}</h1>
+    <span id='date'>{{event.date}}</span>
+  </header>
+{% endblock %}
+
+{% block mainContent %}
+  <p>
+   <img id="image" src="{{event.image}}"></img>
+ <p></p>
+   <span id='location'> <strong> Where the party at? </strong> {{event.location}} </span>
+   <ul id='attendees'> <strong> Will your crew be there? Look who's coming: </strong> {{event.attending}} </ul>
+  </p>
+  
+ 
+{% endblock %}
+
+  {% block footer %}
+  <footer>
+    <a href="/about">About Team Young Frost</a>.
+    <a href="/">Take me home!</a>
+  </footer>
+{% endblock %}

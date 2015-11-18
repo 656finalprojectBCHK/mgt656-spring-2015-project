@@ -7,6 +7,17 @@
   </header>
 {% endblock %}
 
+  {% if errors %}
+    <div class="form-errors">
+      <p>Please correct the following errors!</p>
+      <ul>
+        {% for error in errors %}
+          <li>{{error}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  
 {% block mainContent %}
   <p>
    <img id="image" src="{{event.image}}"></img>
@@ -16,6 +27,20 @@
   </p>
   
  
+<form id="rsvp" method="POST">
+    <div class="form-group">
+        <label for="email">RSVP by entering your @yale.edu email here:</label>
+        <input type="email" name="email" id="email">
+    </div>
+    <div>
+        <input type="submit" value="Submit">
+    </div>
+</form>
+
+  <div>
+    <a href="/events/new">Create a new event</a>
+  </div>
+
 {% endblock %}
 
   {% block footer %}

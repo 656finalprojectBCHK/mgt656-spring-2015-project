@@ -53,7 +53,6 @@ function newEvent(request, response){
   var contextData = {allowedDateInfo: allowedDateInfo};
   response.render('create-event.html', contextData);
 }
-
 /**
  * Controller to which new events are submitted.
  * Validates the form and adds the new event to

@@ -14,7 +14,7 @@
    <span id='location'> <strong> Where the party at? </strong> {{event.location}} </span>
    <ul id='attendees'> <strong> Will your crew be there? Look who's coming: </strong> {{event.attending}} </ul>
   </p>
-  
+
   {% if errors %}
     <ul class="form-errors">
       <p>Please correct the following errors!</p>
@@ -31,11 +31,9 @@
         <input type="submit" value="Submit">
     </div>
 </form>
-
 <div>
     <a class="donation" href="https://mgt656.som.yale.edu/project">Donate</a>
  </div>
-
 
   <div>
     <a href="/events/new">Create a new event</a>
@@ -49,4 +47,3 @@
     <a href="/">Take me home!</a>
   </footer>
 {% endblock %}
-

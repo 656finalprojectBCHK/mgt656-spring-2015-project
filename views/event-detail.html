@@ -32,8 +32,34 @@
     </div>
 </form>
 <div>
-    <a class="donation" href="https://mgt656.som.yale.edu/project">Donate</a>
+    <a class="donation" href="/donate">Donate</a>
  </div>
+
+<script src="//www.google-analytics.com/cx/api.js?experiment=7pc29s17RiK6myjBae1iTg"></script>
+ 
+<!-- Load the JQuery library -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+ 
+<script>
+// Define JavaScript for each page variation of this experiment.
+var pageVariations = [
+  function() {},  // Original: Donate.
+  function() {    // Variation 1: Support
+    $( 'a.donation' ).text( 'Support' );
+  }
+];
+ 
+// Wait for the DOM to load, then execute the view for the chosen variation.
+$(document).ready(function(){
+  // Ask Google Analytics which variation to show the user.
+  var chosenVariation = cxApi.chooseVariation]();
+ 
+  // Execute the chosen view
+  pageVariations[chosenVariation]();
+}
+);
+</script>
+
 
   <div>
     <a href="/events/new">Create a new event</a>
